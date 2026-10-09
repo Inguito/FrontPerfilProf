@@ -43,16 +43,16 @@ export const ProfesorCard = ({ profesor }) => {
           
           {materiasUnicas.length > 0 ? (
             <div className="flex flex-col gap-2">
-              {materiasUnicas.map((m) => (
+              {materiasUnicas.map((materias) => (
                 <div 
-                  key={m.id} 
+                  key={materias.id} 
                   className="bg-emerald-50 border border-emerald-200 rounded-lg p-2.5 flex flex-col items-start gap-1"
                 >
                   <span className="text-sm font-bold text-emerald-950">
-                    {m.nombreEspacio}
+                    {materias.nombreEspacio}
                   </span>
                   <span className="bg-emerald-200 text-emerald-900 text-[10px] font-black px-2 py-0.5 rounded uppercase tracking-wider">
-                    {m.tipoHabilitacion}
+                    {materias.tipoHabilitacion}
                   </span>
                 </div>
               ))}

@@ -2,7 +2,7 @@ import React from 'react';
 
 export const ProfesorCard = ({ profesor }) => {
   // Extraer las materias asignadas a los títulos del profesor
-  const materiasHabilitadas = profesor.TituloNomencladors?.flatMap(titulo => 
+  const materiasHabilitadas = profesor.TituloNomenclador?.flatMap(titulo => 
     (titulo.EspacioCurriculars || []).map(materia => ({
       id: materia.id,
       nombreEspacio: materia.nombreEspacio,

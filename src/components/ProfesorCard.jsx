@@ -3,7 +3,7 @@ import React from 'react';
 export const ProfesorCard = ({ profesor }) => {
   // Extraer las materias asignadas a los títulos del profesor
   const materiasHabilitadas = profesor.TituloNomencladors?.flatMap(titulo => 
-    (titulo.EspacioCurricular || []).map(materia => ({
+    (titulo.EspacioCurriculars || []).map(materia => ({
       id: materia.id,
       nombreEspacio: materia.nombreEspacio,
       // Intenta obtener el tipo desde Sequelize o asigna 'DOCENTE' por defecto

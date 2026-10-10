@@ -9,6 +9,7 @@ export const ProfesorCard = ({ profesor }) => {
       // Intenta obtener el tipo desde Sequelize o asigna 'DOCENTE' por defecto
       tipoHabilitacion: materia.Habilitacion?.tipoHabilitacion || 
         materia.habilitacion?.tipoHabilitacion || 
+        materia.Habilitaciones?.tipoHabilitacion ||
         materia.tipoHabilitacion
     }))
   ) || [];

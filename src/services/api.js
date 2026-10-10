@@ -1,5 +1,11 @@
 // const API_URL = 'http://localhost:3000/api/v1';
-const API_URL = "https://backperfilprof.onrender.com/api/v1";"import.meta.env.VITE_API_URL || 'http://localhost:3000/api/v1';"
+// const API_URL = "https://backperfilprof.onrender.com/api/v1";
+//"import.meta.env.VITE_API_URL || 'http://localhost:3000/api/v1';"
+
+// src/services/api.js
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000/api/v1';
+export default API_URL;
+
 export const getProfesores = async () => {
   const response = await fetch(`${API_URL}/profesores`);
   if (!response.ok) throw new Error('Error al obtener los profesores');
